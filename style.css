@@ -1,6 +1,25 @@
+/* tablet 768px
+desktop 1200px */
+
+
+:root{
+  --green: hsl(160deg, 100%, 30%);
+}
+
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+}
+
+html{
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+body{
+  min-inline-size: 100%;
+  min-block-size: 100%;
+  background-color: #999999;
 }
 
 html,
@@ -10,3 +29,105 @@ body {
 }
 
 /* Add styles here! */
+
+h1, p, h2{
+  margin: 0;
+}
+
+p{
+  line-height: 1.5;
+}
+
+header{
+  inline-size: 100%;
+  padding-block-start: 80px;
+  padding-inline-start: 160px;
+  padding-block-end: 48px;
+  background-color: white;
+}
+
+header h1{
+  margin-block-end: 48px;
+}
+
+header h1+p{
+  margin-block-end: 24px;
+}
+
+strong{
+  color: var(--green);
+}
+
+main{
+  border-block-start: 5px solid #666666;
+  padding-block: 56px;
+}
+
+main section{
+  inline-size: 100%;
+  max-inline-size: 550px;
+  margin: 0 auto;
+  background-color: white;
+  padding-inline: 24px;
+  padding-bottom: 24px;
+  padding-top: 5px;
+}
+
+main section h2{
+  inline-size: fit-content;
+  padding: 1rem;
+  background-color: #FFBF00;
+  padding-inline: 28px;
+  border-block-end: 5px solid #CC9900;
+  margin-bottom: 24px;
+}
+
+
+
+main section p{
+  inline-size: 100%;
+  max-inline-size: 55ch;
+  line-height: 1.5;
+}
+
+main section h2+p{
+  margin-bottom: 18px;
+}
+
+@media (min-width: 1200px) {
+  h2{
+    margin-inline-start: -32px;
+  }
+}
+
+@media (max-width: 767px) {
+ 
+
+  h1{
+    font-weight: bold;
+  }
+
+  p{
+    font-size: 1.5rem;
+  }
+  
+}
+
+@media (max-width: 1199px) {
+  header{
+    padding: 24px;
+    padding-top: 100px;
+  }
+
+  main section{
+    max-inline-size: 100%;
+  }
+
+  h2{
+    margin-left: -24px;
+  }
+
+  p{
+    max-inline-size: 30ch;
+  }
+}
